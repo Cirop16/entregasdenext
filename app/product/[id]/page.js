@@ -1,6 +1,7 @@
 import PageTitle from "@/components/PageTitle";
 import Link from "next/link";
 
+
 export default async function ProductDetailsPage({ params }) {
 
     const { id } = await params
@@ -10,8 +11,8 @@ export default async function ProductDetailsPage({ params }) {
     if(productDetail.message) {
         return (
             <>
-                <PageTitle>Producto no encontrado</PageTitle>
-                <p>El producto con el id {id} no existe, intentalo nuevamente</p>
+                <PageTitle>El producto no fue encontrado</PageTitle>
+                <p>El producto con id {id} no existe, intentalo de nuevo</p>
                 <Link href="/product">Volver a productos</Link>
             </>
         )
