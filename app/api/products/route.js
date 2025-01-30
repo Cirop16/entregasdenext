@@ -7,19 +7,17 @@ export async function GET(request) {
 
     const searchParams = request.nextUrl.searchParams
     const categoria = searchParams.get("categoria")
-
     const productsCollection = collection(db, "products")
 
     try {
 
         const filtro = query(productsCollection, where("category", "==", categoria))
         const snapshot = await getDocs(categoria ? filtro : productsCollection)
-
         const productosFinales = snapshot.docs.map((documentRef) => {
-            const id = documentRef.id
-            const productoData = documentRef.data()
-            productoData.id = id
-            return productoData
+        const id = documentRef.id
+        const productoData = documentRef.data()
+        productoData.id = id
+        return productoData
         })
 
 
