@@ -10,7 +10,6 @@ function ProductList({ productos }) {
                     <article className="p-2 shadow-md rounded-md relative aspect-[1/1.15] overflow-hidden group" key={producto.id}>
                         <Image
                             src={producto.image1}
-                            //alt={`Thumbnail de ${producto.title}`}
                             alt={`Thumbnail de ${producto.name}`}
                             fill
                             className="group-hover:scale-125 transition-all"

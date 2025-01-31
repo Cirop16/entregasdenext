@@ -6,4 +6,5 @@ async function HomePage() {
     </div>
   );
 }
+
 export default HomePage

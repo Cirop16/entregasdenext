@@ -39,9 +39,7 @@ const AuthContextProvider = (props) => {
 
     return (
         <Provider value={{ loggedIn, handleLogin, handleLogout }}>
-            {/* <CarritoProvider> */}
                 {props.children}
-            {/* </CarritoProvider> */}
         </Provider>
     );
 }
