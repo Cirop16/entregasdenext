@@ -12,4 +12,5 @@ function ProductsLoader() {
         </>
     )
 }
+
 export default ProductsLoader

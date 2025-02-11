@@ -1,15 +1,15 @@
 import { getProducts } from "@/actions/getProducts"
 import ProductList from "./ProductList"
+import PageTitle from "./PageTitle"
 
+async function ProductListContainer({ categoria }) {
 
-async function ProductListContainer() {
-
-    const { payload: products, error, message } = await getProducts()
+    const { payload: products, error, message } = await getProducts(categoria)
 
     if (error) {
         return (
             <>
-                <PageTitle>Error404</PageTitle>
+                <PageTitle>Error</PageTitle>
                 <p>{message}</p>
             </>
         )
